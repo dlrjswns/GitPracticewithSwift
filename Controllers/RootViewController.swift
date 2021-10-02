@@ -66,12 +66,9 @@ class RootViewController:UIViewController{
     
     lazy var loginBtn:UIButton = {
         let button = UIButton(type: .system)
-        button.frame = CGRect(x: 160, y: 100, width: 50, height: 50)
-            button.layer.cornerRadius = 0.5 * button.bounds.size.width
         button.setTitle("로그인", for: .normal)
         button.backgroundColor = .systemGroupedBackground
         button.layer.borderWidth = 1
-        button.layer.cornerRadius = button.layer.bounds.width*0.5
         button.addTarget(self, action: #selector(loginBtnAction), for: UIControl.Event.touchUpInside)
         return button
     }()
@@ -102,7 +99,7 @@ class RootViewController:UIViewController{
         
         view.addSubview(titleLabel)
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 50).isActive = true
+        titleLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 80).isActive = true
         titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         
         view.addSubview(subtitleLabel)
@@ -128,8 +125,8 @@ class RootViewController:UIViewController{
         loginBtn.translatesAutoresizingMaskIntoConstraints = false
         loginBtn.topAnchor.constraint(equalTo: pwView.bottomAnchor, constant: 20).isActive = true
         loginBtn.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-//        loginBtn.widthAnchor.constraint(equalToConstant: 40).isActive = true
-//        loginBtn.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        loginBtn.widthAnchor.constraint(equalToConstant: view.frame.width-40).isActive = true
+        loginBtn.heightAnchor.constraint(equalToConstant: 40).isActive = true
     }
     
 }
