@@ -35,5 +35,5 @@ class TableCell:UITableViewCell{
         cellLabel.translatesAutoresizingMaskIntoConstraints = false
         cellLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         cellLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
-    }
+   }
 }
